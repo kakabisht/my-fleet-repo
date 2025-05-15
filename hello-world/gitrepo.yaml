@@ -1,0 +1,11 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: hello-world-repo
+  namespace: cattle-fleet-system
+spec:
+  repo: https://github.com/kakabisht/my-fleet-repo
+  branch: main
+  paths:
+    - ./hello-world
+  # clientSecretName: my-ssh-key-secret, optional: for private repos

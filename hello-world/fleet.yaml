@@ -1,0 +1,6 @@
+defaultNamespace: hello-world
+targets:
+  - name: all-clusters
+    clusterSelector:
+      matchLabels:
+        env: dev
