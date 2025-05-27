@@ -1,22 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
-  labels:
-    app: frontend
+  name: microservice-demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend
+      app: demo
   template:
     metadata:
       labels:
-        app: frontend
+        app: demo
     spec:
       containers:
-        - name: frontend
-          image: gcr.io/google-samples/microservices-demo/frontend:v0.8.0
+        - name: demo
+          image: gcr.io/google-samples/microservices-demo/*
           ports:
-            - containerPort: 8080
-
+            - containerPort: 3000
+          
