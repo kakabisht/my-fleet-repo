@@ -16,6 +16,6 @@ jobs:
             github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.name,
-              issue_number: context.issue.number,
+              issue_number: context.payload.pull_request.number,
               body: "This PR has been merged. Please remember to delete the branch if it's no longer needed."
             })
